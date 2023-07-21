@@ -23,7 +23,6 @@ commands:
                     curl -X POST http://localhost/WebAPI/LogIn \
                         -H "Content-Type: application/json" \
                         -d { "UID" : "<< parameters.uid >>" }
-                        1
 jobs:
   build:
     docker:
