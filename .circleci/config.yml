@@ -13,7 +13,7 @@ commands:
                     Client UID to login to DM API
                 type: string
         steps:
-            - run:
+            - run1:
                 name: Login to API
                 command: |
                     curl -X POST http://localhost/WebAPI/LogIn \
