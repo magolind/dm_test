@@ -1,0 +1,21 @@
+version: 2.1
+description: |
+    Run load tests and reliability tests using DM.
+    source_url: https://github.com/magolind/dm_test.git
+commands:
+    test_login:
+        description: |
+            Login
+        parameters:
+            uid:
+                default: ""
+                description: |
+                    Client UID to login to DM API
+                type: string
+        steps:
+            - run:
+                name: Login to API
+                command: |
+                    curl -X POST http://localhost/WebAPI/LogIn \
+                        -H "Content-Type: application/json"
+                        -d '{"UID" : "<< parameters.uid >>"}'
