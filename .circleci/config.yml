@@ -14,7 +14,6 @@ commands:
                 type: string
         steps:
             - run:
-                name: Login to API
                 command: |
                     curl -X POST http://localhost/WebAPI/LogIn \
                         -H "Content-Type: application/json"
