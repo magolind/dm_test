@@ -1,0 +1,27 @@
+# Starter pipeline
+
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
+- task: LoadViewTest@0
+  inputs:
+    UID: '46BEE3E104254D8EA54995642E03F630'
+    StressHistorySeqID: 1107
+    UserName: 'dana_full'
+    MaxPercentErrors: 10
+    MaxAverageDuration: 1000
